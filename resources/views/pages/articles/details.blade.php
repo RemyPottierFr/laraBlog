@@ -57,7 +57,7 @@
         </div>
         <div class="mt-6">
             <a href="{{ route('article_list') }}" class="text-primary px-3 py-2 rounded hover:bg-secondary hover:bg-opacity-25 text-xl transition-all duration-500 ease-in-out">
-                <i class="fas fa-angle-left mr-2"></i> Aller à la liste d'articles
+                <i class="fas fa-angle-left mr-2"></i> Découvrir d'autres articles
             </a>
         </div>
     </section>
