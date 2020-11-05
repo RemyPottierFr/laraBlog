@@ -14,13 +14,15 @@ module.exports = {
         colors: {
             primary: "#F05349",
             secondary: "#6C6C6C",
-            default: "#FFFFFF"
+            default: "#FFFFFF",
+            light:'#919191'
         },
         extend: {
             colors: {
                 primary: "#F05349",
                 secondary: "#6C6C6C",
-                default: "#FFFFFF"
+                default: "#FFFFFF",
+                light:'#919191'
             },
             zIndex: {
                 '1': '1',
@@ -36,6 +38,7 @@ module.exports = {
                 old: 'Old Standard TT',
                 quick: 'Quicksand',
                 roboto: 'Roboto, sans-serif',
+                poppins: 'Poppins, sans-serif'
             },
             margin: {
                 '0': '0',
@@ -406,6 +409,8 @@ module.exports = {
 
         },
     },
-    variants: {},
+    variants: {
+        borderRadius: ['responsive', 'hover', 'focus'],
+    },
     plugins: [],
 }
