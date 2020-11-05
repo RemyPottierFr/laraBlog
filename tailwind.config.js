@@ -12,19 +12,17 @@ module.exports = {
     },
     theme: {
         colors: {
-            primary: "#469752",
-            secondary: "#F05A28",
+            primary: "#F05349",
+            secondary: "#6C6C6C",
             default: "#FFFFFF",
-            light: "#F2F2F2",
-            dark: "#333333"
+            light:'#919191'
         },
         extend: {
             colors: {
-                primary: "#469752",
-                secondary: "#F05A28",
+                primary: "#F05349",
+                secondary: "#6C6C6C",
                 default: "#FFFFFF",
-                light: "#F2F2F2",
-                dark: "#333333"
+                light:'#919191'
             },
             zIndex: {
                 '1': '1',
@@ -40,6 +38,7 @@ module.exports = {
                 old: 'Old Standard TT',
                 quick: 'Quicksand',
                 roboto: 'Roboto, sans-serif',
+                poppins: 'Poppins, sans-serif'
             },
             margin: {
                 '0': '0',
@@ -393,19 +392,25 @@ module.exports = {
                 '-48': '-12rem',
                 '-56': '-14rem',
                 '-64': '-16rem',
-                '1/2': '50%',
                 '1/4': '25%',
+                '1/3': '33%',
+                '1/2': '50%',
                 '3/4': '75%',
                 full: '100%',
-                '-1/2': '-50%',
                 '-1/4': '-25%',
+                '-1/3': '-33%',
+                '-1/2': '-50%',
                 '-3/4': '-75%',
+                '-full': '-100%',
             },
             fontSize: {
                 initial: 'initial',
             },
+
         },
     },
-    variants: {},
+    variants: {
+        borderRadius: ['responsive', 'hover', 'focus'],
+    },
     plugins: [],
 }
