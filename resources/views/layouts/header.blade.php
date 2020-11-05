@@ -14,26 +14,29 @@
     <div id="header-menu"
          class="flex flex-col justify-between bg-default transition-all ease-in-out duration-700 -right-full absolute top-full header-menu shadow-md">
         <div class="py-2 px-6 flex flex-col text-right text-2xl font-bold">
-            <a href=""
+            <a href="{{ route('article_list') }}"
                class="text-primary px-4 py-4 hover:bg-secondary hover:bg-opacity-25 rounded transition-all ease-in-out duration-300">Liste
                 des articles</a>
             <a href="{{ route('article', ["id" => 1]) }}"
                class="text-primary px-4 py-4 hover:bg-secondary hover:bg-opacity-25 rounded transition-all ease-in-out duration-300">Un
                 article</a>
-            <a href=""
-               class="text-primary px-4 py-4 hover:bg-secondary hover:bg-opacity-25 rounded transition-all ease-in-out duration-300">Les
-                auteurs</a>
+            <a href="{{ route('author', ["id" => 1]) }}"
+               class="text-primary px-4 py-4 hover:bg-secondary hover:bg-opacity-25 rounded transition-all ease-in-out duration-300">Un
+                auteur</a>
             <a href=""
                class="text-primary px-4 py-4 hover:bg-secondary hover:bg-opacity-25 rounded transition-all ease-in-out duration-300">Connexion</a>
         </div>
         <div class="border-t border-primary py-2 px-6 flex justify-around">
-            <a href="" class="text-secondary hover:text-primary transition-colors ease-in-out duration-300 text-4xl">
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/RemyPottierFr"
+               class="text-secondary hover:text-primary transition-colors ease-in-out duration-300 text-4xl">
                 <i class="fab fa-github-square"></i>
             </a>
-            <a href="" class="text-secondary hover:text-primary transition-colors ease-in-out duration-300 text-4xl">
+            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/remypottierfr/"
+               class="text-secondary hover:text-primary transition-colors ease-in-out duration-300 text-4xl">
                 <i class="fab fa-linkedin"></i>
             </a>
-            <a href="" class="text-secondary hover:text-primary transition-colors ease-in-out duration-300 text-4xl">
+            <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/RemyPottier37"
+               class="text-secondary hover:text-primary transition-colors ease-in-out duration-300 text-4xl">
                 <i class="fab fa-twitter-square"></i>
             </a>
         </div>

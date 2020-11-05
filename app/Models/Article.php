@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Article extends Model
 {
     use HasFactory;
+
     /**
      * The attributes that are mass assignable.
      *
@@ -20,4 +21,9 @@ class Article extends Model
         'picture',
         'author_id'
     ];
+
+    public function author()
+    {
+        return $this->hasOne('App\Models\User', 'id', 'author_id');
+    }
 }
