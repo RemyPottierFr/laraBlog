@@ -8,4 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class Article extends Model
 {
     use HasFactory;
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'content',
+        'title',
+        'description',
+        'picture',
+        'author_id'
+    ];
 }
