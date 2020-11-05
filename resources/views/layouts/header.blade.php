@@ -11,11 +11,20 @@
             <span class="w-full h-1 bg-primary"></span>
         </button>
     </div>
-    <div id="header-menu" class="flex flex-col justify-between bg-default transition-all ease-in-out duration-700 -right-full absolute top-full header-menu shadow-md">
+    <div id="header-menu"
+         class="flex flex-col justify-between bg-default transition-all ease-in-out duration-700 -right-full absolute top-full header-menu shadow-md">
         <div class="py-2 px-6 flex flex-col text-right text-2xl font-bold">
-            <a href="" class="text-primary px-4 py-4 hover:bg-secondary hover:bg-opacity-25 rounded transition-all ease-in-out duration-300">Liste des articles</a>
-            <a href="" class="text-primary px-4 py-4 hover:bg-secondary hover:bg-opacity-25 rounded transition-all ease-in-out duration-300">Les auteurs</a>
-            <a href="" class="text-primary px-4 py-4 hover:bg-secondary hover:bg-opacity-25 rounded transition-all ease-in-out duration-300">Connexion</a>
+            <a href=""
+               class="text-primary px-4 py-4 hover:bg-secondary hover:bg-opacity-25 rounded transition-all ease-in-out duration-300">Liste
+                des articles</a>
+            <a href="{{ route('article', ["id" => 1]) }}"
+               class="text-primary px-4 py-4 hover:bg-secondary hover:bg-opacity-25 rounded transition-all ease-in-out duration-300">Un
+                article</a>
+            <a href=""
+               class="text-primary px-4 py-4 hover:bg-secondary hover:bg-opacity-25 rounded transition-all ease-in-out duration-300">Les
+                auteurs</a>
+            <a href=""
+               class="text-primary px-4 py-4 hover:bg-secondary hover:bg-opacity-25 rounded transition-all ease-in-out duration-300">Connexion</a>
         </div>
         <div class="border-t border-primary py-2 px-6 flex justify-around">
             <a href="" class="text-secondary hover:text-primary transition-colors ease-in-out duration-300 text-4xl">
