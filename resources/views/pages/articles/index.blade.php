@@ -11,7 +11,7 @@
                 <div class="flex flex-col w-full py-4">
                     <p class="text-light tracking-wider"><span
                             class="font-semibold text-secondary hover:text-primary uppercase">Product</span>
-                        • {{ $article->created_at->format('M t Y') }}
+                        • {{ $article->updated_at->format('M t Y') }}
                     </p>
                     <a href="{{ route('article',["id"=>$article->id]) }}"
                        class="text-2xl my-4 tracking-wide hover:text-primary transition-all duration-500 ease-in-out">{{ $article->title }}</a>

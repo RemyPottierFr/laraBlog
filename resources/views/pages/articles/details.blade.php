@@ -16,7 +16,7 @@
             </div>
             <p class="text-light tracking-wider my-4">
                 <span class="font-semibold text-secondary hover:text-primary uppercase">Product</span>
-                • {{ $article->created_at->format('M t Y') }}
+                • {{ $article->updated_at->format('M t Y') }}
             </p>
             <h2
                 class="text-3xl mb-4 tracking-wide">{{ $article->title }}</h2>

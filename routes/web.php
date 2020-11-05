@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\ArticleController;
+use App\Models\Article;
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,7 +18,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    $articles = Article::all()->load('author');
+//    $secondary = Article::all()->load('author')->slice(-3)->slice(0, 2);
+    return view('index', ["articles" => $articles]);
 })->name('app_index');
 
 Route::get('/article', [ArticleController::class, 'index'])->name('article_list');
