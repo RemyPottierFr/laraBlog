@@ -1,9 +1,8 @@
 <?php
 
 use App\Http\Controllers\ArticleController;
-use App\Models\Article;
-use App\Models\User;
-use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,18 +16,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $articles = Article::all()->load('author');
-//    $secondary = Article::all()->load('author')->slice(-3)->slice(0, 2);
-    return view('index', ["articles" => $articles]);
-})->name('app_index');
+Route::get('/', [ArticleController::class, 'home'])->name('app_index');
 
 Route::get('/article', [ArticleController::class, 'index'])->name('article_list');
 
 Route::get('/article/{id}', [ArticleController::class, 'details'])->name('article');
 
-Route::get('/author/{id}', function () {
-    $author = User::findOrFail(request('id'));
+Route::get('/author/{id}', [UserController::class, 'details'])->name('author');
 
-    return view('pages.author.index', ["author" => $author]);
-})->name('author');
+Route::get('/login', [AuthController::class, 'login'])->name('login');
+Route::post('/login', [AuthController::class, 'login_process']);
+
+Route::get('/register', [AuthController::class, 'register'])->name('register');
+Route::post('/register', [AuthController::class, 'register_process']);
+
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::get('/dashboard', [UserController::class, 'dashboard'])->name('dashboard');

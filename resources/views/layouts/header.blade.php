@@ -23,22 +23,34 @@
             <a href="{{ route('author', ["id" => 1]) }}"
                class="text-primary px-4 py-4 hover:bg-secondary hover:bg-opacity-25 rounded transition-all ease-in-out duration-300">Un
                 auteur</a>
-            <a href=""
-               class="text-primary px-4 py-4 hover:bg-secondary hover:bg-opacity-25 rounded transition-all ease-in-out duration-300">Connexion</a>
+            @if(auth()->guest())
+                <a href="{{ route('login') }}"
+                   class="text-primary px-4 py-4 hover:bg-secondary hover:bg-opacity-25 rounded transition-all ease-in-out duration-300">Login
+                    / Register</a>
+            @else
+                <a href="{{ route('dashboard') }}"
+                   class="text-primary px-4 py-4 hover:bg-secondary hover:bg-opacity-25 rounded transition-all ease-in-out duration-300">Dashboard</a>
+            @endif
         </div>
-        <div class="border-t border-primary py-2 px-6 flex justify-around">
-            <a target="_blank" rel="noopener noreferrer" href="https://github.com/RemyPottierFr"
-               class="text-secondary hover:text-primary transition-colors ease-in-out duration-300 text-4xl">
-                <i class="fab fa-github-square"></i>
-            </a>
-            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/remypottierfr/"
-               class="text-secondary hover:text-primary transition-colors ease-in-out duration-300 text-4xl">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/RemyPottier37"
-               class="text-secondary hover:text-primary transition-colors ease-in-out duration-300 text-4xl">
-                <i class="fab fa-twitter-square"></i>
-            </a>
+        <div class="flex flex-col">
+            @if(auth()->check())
+                <a href="{{ route('logout') }}"
+                   class="text-primary text-center rounded bg-primary text-default uppercase p-4 mx-4 tracking-widest hover:shadow hover:bg-default hover:text-primary transition-all duration-300 ease-out">Logout</a>
+            @endif
+            <div class="border-t border-primary py-2 px-6 flex justify-around mt-4">
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/RemyPottierFr"
+                   class="text-secondary hover:text-primary transition-colors ease-in-out duration-300 text-4xl">
+                    <i class="fab fa-github-square"></i>
+                </a>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/remypottierfr/"
+                   class="text-secondary hover:text-primary transition-colors ease-in-out duration-300 text-4xl">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/RemyPottier37"
+                   class="text-secondary hover:text-primary transition-colors ease-in-out duration-300 text-4xl">
+                    <i class="fab fa-twitter-square"></i>
+                </a>
+            </div>
         </div>
     </div>
 </section>

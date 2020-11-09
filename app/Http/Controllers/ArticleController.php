@@ -8,8 +8,13 @@ class ArticleController extends Controller
 {
     public function index()
     {
-        $articles = Article::all()->load('author');
+        $articles = Article::all()->sortByDesc('id')->load('author');
         return view('pages.articles.index', ["articles" => $articles]);
+    }
+
+    public function home (){
+        $articles = Article::all()->load('author');
+        return view('index', ["articles" => $articles]);
     }
 
     public function details()

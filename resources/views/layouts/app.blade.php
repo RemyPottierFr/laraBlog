@@ -13,7 +13,7 @@
 
 @include('layouts.header')
 
-<div class="relative w-full min-h-screen mt-20 py-8 px-2">
+<div class="relative w-full h-full pt-20 py-8 px-2">
     @yield('content')
 </div>
 

@@ -24,6 +24,7 @@
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "^5.15.1",
-        "tailwindcss": "^1.9.6"
+        "tailwindcss": "^1.9.6",
+        "tinymce": "^5.5.1"
     }
 }
