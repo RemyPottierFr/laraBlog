@@ -9,6 +9,8 @@ mix.js('resources/js/app.js', 'public/js')
         postCss: [ tailwindcss('./tailwind.config.js') ],
     })
 
+
+// Tiny MCE need this files in public folder
 mix.copyDirectory('node_modules/tinymce/icons', 'public/node_modules/tinymce/icons');
 mix.copyDirectory('node_modules/tinymce/plugins', 'public/node_modules/tinymce/plugins');
 mix.copyDirectory('node_modules/tinymce/skins', 'public/node_modules/tinymce/skins');

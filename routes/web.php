@@ -3,6 +3,7 @@
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
+use App\Http\Middleware\AuthMiddleware;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +17,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Restricted routes
+Route::group([
+    "middleware" => [AuthMiddleware::class]
+], function () {
+    Route::get('/dashboard', [UserController::class, 'dashboard'])->name('dashboard');
+    Route::get('/dashboard/settings', [UserController::class, 'settings'])->name('user_settings');
+    Route::get('/article/create', [ArticleController::class, 'create'])->name('add_article');
+    Route::post('/article/create', [ArticleController::class, 'create_process']);
+    Route::post('/article/delete', [ArticleController::class, 'delete'])->name("article_delete");
+});
+
+// Normal routes
 Route::get('/', [ArticleController::class, 'home'])->name('app_index');
 
 Route::get('/article', [ArticleController::class, 'index'])->name('article_list');
@@ -31,5 +44,3 @@ Route::get('/register', [AuthController::class, 'register'])->name('register');
 Route::post('/register', [AuthController::class, 'register_process']);
 
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
-
-Route::get('/dashboard', [UserController::class, 'dashboard'])->name('dashboard');

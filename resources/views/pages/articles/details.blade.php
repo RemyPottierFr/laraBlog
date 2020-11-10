@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <section class="flex flex-col">
+    <section class="flex flex-col mt-8">
         <div class="w-full">
             <img src="{{ $article->picture }}" class="w-full h-auto"/>
         </div>
@@ -21,7 +21,7 @@
             <h2
                 class="text-3xl mb-4 tracking-wide">{{ $article->title }}</h2>
             <p class="text-secondary text-lg tracking-wide leading-8 w-full md:w-11/12">
-                {{ $article->content }}
+                {!! $article->content !!}
             </p>
         </div>
         <div class="mt-6">

@@ -11,11 +11,11 @@
         rel="stylesheet">
     <title>@yield('title', 'LaraBlog')</title>
 </head>
-<body class="bg-white flex flex-no-wrap min-h-screen max-w-screen overflow-x-hidden">
+<body class="bg-white flex flex-no-wrap h-screen w-screen">
 
 @include("layouts.vertical-header")
 
-<div class="relative w-full min-h-screen px-2">
+<div class="relative w-full h-screen px-2 overflow-y-scroll overflow-x-hidden">
     @yield('content')
     @include('layouts.footer')
 </div>

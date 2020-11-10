@@ -8,13 +8,10 @@
             <a href="{{ route('dashboard') }}"
                class="text-primary py-4 hover:bg-secondary hover:bg-opacity-25 transition-all ease-in-out duration-300"><i
                     class="fas fa-home"></i></a>
-            <a href="{{ route('article_list') }}"
+            <a href="{{ route('add_article') }}"
                class="text-primary py-4 hover:bg-secondary hover:bg-opacity-25 transition-all ease-in-out duration-300"><i
                     class="fas fa-plus"></i></a>
-            <a href="{{ route('article', ["id" => 1]) }}"
-               class="text-primary py-4 hover:bg-secondary hover:bg-opacity-25 transition-all ease-in-out duration-300"><i
-                    class="far fa-newspaper"></i></a>
-            <a href="{{ route('author', ["id" => 1]) }}"
+            <a href="{{ route('user_settings') }}"
                class="text-primary py-4 hover:bg-secondary hover:bg-opacity-25 transition-all ease-in-out duration-300"><i
                     class="fas fa-cog"></i></a>
         </div>

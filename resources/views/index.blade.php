@@ -2,7 +2,7 @@
 
 @section('content')
     @foreach($articles->slice(-1) as $article)
-        <section class="flex flex-col py-12">
+        <section class="flex flex-col py-12 text-2xl">
             <div class="flex justify-between flex-col md:flex-row items-start">
                 <a href="{{ route('article', ["id"=>$article->id]) }}" class="w-full md:w-1/2 mr-2">
                     <img src="{{ $article->picture }}"
